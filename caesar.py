@@ -40,7 +40,7 @@ def rotate_character(char, rot):
 
     alphabet = 'abcdefghijklmnopqrstuvwxyz'
 
-    rotated_idx = (alphabet_position(char) + rot) % 26
+    rotated_idx = ((alphabet_position(char) + rot) % 26)
 
 
 
@@ -55,18 +55,12 @@ def rotate_character(char, rot):
 
 
 def rotate_string(text, rot):
-
-
-
     rotated = ''
-
-
-
     for char in text:
 
         if (char.isalpha()):
 
-            rotated = rotated + rotate_character(char, rot)
+            rotated = (rotated + rotate_character(char, rot))
         else:
 
             rotated = rotated + char
@@ -74,3 +68,6 @@ def rotate_string(text, rot):
 
 
     return rotated
+#text =input("enter text:")  
+#rot = int(input("enter rotation value:")) 
+#print(rotate_string(text,rot))    
